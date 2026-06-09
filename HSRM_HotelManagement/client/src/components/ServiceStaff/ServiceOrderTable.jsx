@@ -1,1 +1,0 @@
-import Table from '../shared/Table'; export default function ServiceOrderTable({data}){return <Table data={data} columns={[{key:'service_order_id',label:'ID'},{key:'reservation_id',label:'Reservation'},{key:'service_id',label:'Service'},{key:'quantity',label:'Qty'},{key:'status',label:'Status'}]} />}

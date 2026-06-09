@@ -1,1 +1,0 @@
-import { formatCurrency } from '../../utils/formatCurrency'; export default function RoomCard({room}){return <div className='card'><h3>Room {room.room_number}</h3><p>{room.type_name || 'Room'}</p><p>{formatCurrency(room.base_price)}</p><span className='status'>{room.status}</span></div>}

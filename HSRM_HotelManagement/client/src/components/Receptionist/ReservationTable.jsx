@@ -1,1 +1,0 @@
-import Table from '../shared/Table'; export default function ReservationTable({data}){return <Table data={data} columns={[{key:'reservation_id',label:'ID'},{key:'guest_id',label:'Guest'},{key:'room_id',label:'Room'},{key:'check_in_date',label:'Check-in'},{key:'check_out_date',label:'Check-out'},{key:'status',label:'Status'}]} />}
