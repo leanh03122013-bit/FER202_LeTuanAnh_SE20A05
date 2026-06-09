@@ -1,0 +1,12 @@
+import express from 'express';
+import * as controller from '../controllers/invoiceController.js';
+import { authMiddleware } from '../middlewares/authMiddleware.js';
+const router = express.Router();
+router.get('/', authMiddleware, controller.getAll);
+router.get('/:id', authMiddleware, controller.getById);
+router.get('/calculate/:reservationId', authMiddleware, controller.calculate);
+router.post('/', authMiddleware, controller.create);
+router.patch('/:id/pay', authMiddleware, controller.pay);
+router.put('/:id', authMiddleware, controller.update);
+router.delete('/:id', authMiddleware, controller.remove);
+export default router;

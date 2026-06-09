@@ -1,0 +1,13 @@
+import express from 'express';
+import * as controller from '../controllers/reservationController.js';
+import { authMiddleware } from '../middlewares/authMiddleware.js';
+const router = express.Router();
+router.get('/available-rooms', controller.availableRooms);
+router.get('/', authMiddleware, controller.getAll);
+router.get('/:id', authMiddleware, controller.getById);
+router.post('/', authMiddleware, controller.create);
+router.put('/:id', authMiddleware, controller.update);
+router.patch('/:id/confirm', authMiddleware, controller.confirm);
+router.patch('/:id/cancel', authMiddleware, controller.cancel);
+router.delete('/:id', authMiddleware, controller.remove);
+export default router;
